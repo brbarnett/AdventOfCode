@@ -1,0 +1,20 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "program.js",
+  "dependencies": {
+    "node-promise": "^0.5.12",
+    "request-promise": "^1.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brbarnett/AdventOfCode.git"
+  },
+  "author": "Brandon R. Barnett",
+  "bugs": {
+    "url": "https://github.com/brbarnett/AdventOfCode/issues"
+  },
+  "homepage": "https://github.com/brbarnett/AdventOfCode#readme"
+}
