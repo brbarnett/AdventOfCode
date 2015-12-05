@@ -1,3 +1,3 @@
-var process = require('./day4/b');
+var process = require('./day5/a');
 
 process.run();
