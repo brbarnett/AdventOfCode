@@ -22,8 +22,6 @@ function processInput (data){
     if(isNice === true) nice++;  
   } 
   
-  
- 
   console.log(nice);
 }
 
@@ -33,7 +31,6 @@ function testString(string){
   
   // test if 3 vowels
   var vowels = (string.match(/[aeiou]/gi) || []).length;
-  //var vowels = _.intersection(string, v).length;
   if(vowels < 3) return false;
   
   // test repeating char
