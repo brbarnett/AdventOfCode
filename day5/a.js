@@ -14,24 +14,31 @@ function run(){
 
 function processInput (data){
   var strings = data.split('\n');
-  
+
   var nice = 0;
   for(var i = 0; i < strings.length; i++){
     var isNice = testString(strings[i]);
     
-    if(isNice) nice++;  
+    if(isNice === true) nice++;  
   } 
   
+  
+ 
   console.log(nice);
 }
 
-var vowels = 'aeiou';
+var v = 'aeiou';
 function testString(string){
+  if(string.length <= 0) return false;
+  
   // test if 3 vowels
-  if(_.intersection(string, vowels).length < 3) return false;
+  var vowels = (string.match(/[aeiou]/gi) || []).length;
+  //var vowels = _.intersection(string, v).length;
+  if(vowels < 3) return false;
   
   // test repeating char
-  if((string.match(/([a-zA-Z]).*(\1)/) || []).length <= 0) return false;
+  var matches = (string.match(/(.)\1/) || []).length;
+  if(matches <= 0) return false;
   
   // test for illegal substring
   if(string.indexOf('ab') >= 0) return false;
